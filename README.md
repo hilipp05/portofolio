@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portofolio
 
-## Getting Started
+Next.js 16 (App Router) + Tailwind v4. Tema gelap, teknis, tanpa gambar, dengan lapisan animasi (lihat bagian Gerak di `DESIGN.md`).
 
-First, run the development server:
+## Menjalankan
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Buka http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Mengisi konten
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Semua teks ada di `data/portfolio.ts`. Isinya placeholder jujur ("Nama Kamu",
+"20XX"). Ganti satu per satu, lalu set `site.isTemplate` ke `false`.
 
-## Learn More
+- Tambah proyek: salin satu objek di `projects`. `slug` dipakai di URL.
+- Nama teknologi di `projects[].stack` harus sama persis dengan di `stack`
+  agar filter dan jumlah proyek berfungsi.
+- Hapus field opsional (`demo`, `repo`, `snippet`) kalau tidak ada. Halaman
+  tidak akan menampilkannya.
 
-To learn more about Next.js, take a look at the following resources:
+## Pintasan
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `Ctrl K` / `Cmd K`: command palette
+- Panah atas/bawah pada daftar proyek: pindah proyek
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Alasan keputusan desain ada di `DESIGN.md`.
